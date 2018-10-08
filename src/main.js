@@ -9,6 +9,8 @@ $(document).ready(function() {
     event.preventDefault();
     let pet1 = new Pet;
     pet1.name = $("input[type='text']").val();
+    $(".actionButtons").show();
+    $(".status").show();
 
     pet1.increaseHunger();
     pet1.increaseLoneliness();
@@ -29,10 +31,12 @@ $(document).ready(function() {
     $("button[name='sleep']").click(function() {
       pet1.sleep();
     });
+
+    $("#restart").click(function() {
+      console.log("click is working");
+      location.reload();
+    });
   });
 
 
-  $("#restartButton").click(function() {
-    event.preventDefault();
-  });
 });
