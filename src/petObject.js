@@ -1,3 +1,5 @@
+import { clearButtons } from './main.js';
+
 export class Pet {
   constructor() {
     this.name = name;
@@ -12,7 +14,8 @@ export class Pet {
     clearInterval(lonelinessInterval);
     clearInterval(sleepinessInterval);
     document.getElementById("dead").innerHTML = "Your pet is dead";
-    document.getElementById("restart").innerHTML = "<button type='button' name='restart' id='restartButton'>Restart</button>";
+    document.getElementById("restart").innerHTML = "<button class='btn btn-danger' type='button' name='restart' id='restartButton'>Restart</button>";
+    // clearButtons();
     }
   }
 
@@ -25,11 +28,10 @@ export class Pet {
         document.getElementById("imageToReplace").innerHTML = "<img src='./assets/images/hungry-pusheen.gif'>";
       } else {
         this.hungerLevel++;
-        console.log("Hunger: " + this.hungerLevel);
         document.getElementById("hungerStatus").innerHTML = this.hungerLevel;
         return this.hungerLevel;
       }
-    }, 1000);
+    }, 200);
   }
 
   feed() {
@@ -49,7 +51,7 @@ export class Pet {
         document.getElementById("lonelinessStatus").innerHTML = this.lonelinessLevel;
         return this.lonelinessLevel;
       }
-    }, 2000);
+    }, 600);
   }
 
   snuggle() {
@@ -69,7 +71,7 @@ export class Pet {
         document.getElementById("sleepinessStatus").innerHTML = this.sleepinessLevel;
         return this.sleepinessLevel;
       }
-    }, 3000);
+    }, 800);
   }
 
   sleep() {

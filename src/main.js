@@ -36,17 +36,22 @@ $(document).ready(function() {
       pet1.sleep();
     });
 
-    console.log("pet1.lonelinessLevel: " + pet1.lonelinessLevel);
-    if (pet1.lonelinessLevel >= 7) {
-      $("#pusheenLonelyImage").show();
-      $("#pusheenImage").hide();
-    }
+
+
+    // if (pet1.lonelinessLevel >= 7) {
+    //   $("#pusheenLonelyImage").show();
+    //   $("#pusheenImage").hide();
+    // }
 
     $("#restart").click(function() {
-      console.log("click is working");
       location.reload();
     });
   });
 
 
 });
+
+// function clearButtons() {
+//   alert("this called");
+//   $(".actionButtons").hide();
+// }
