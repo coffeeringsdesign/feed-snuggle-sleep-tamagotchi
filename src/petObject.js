@@ -11,47 +11,58 @@ export class Pet {
     clearInterval(hungerInterval);
     clearInterval(lonelinessInterval);
     clearInterval(sleepinessInterval);
+    document.getElementById("dead").innerHTML = "Your pet is dead";
+    document.getElementById("restart").innerHTML = "<button type='button' name='restart' id='restartButton'>Restart</button>";
     }
   }
 
   increaseHunger() {
     const hungerInterval = setInterval(() => {
-      console.log(this.deathCheck());
       if (this.deathCheck() === true) {
-        console.log("condition met");
         this.deathClearInterval(hungerInterval);
       } else {
-        console.log("Hunger: " + this.hungerLevel);
         this.hungerLevel++;
+        console.log("Hunger: " + this.hungerLevel);
+        document.getElementById("hungerStatus").innerHTML = this.hungerLevel;
         return this.hungerLevel;
       }
     }, 1000);
   }
 
+  feed() {
+    this.hungerLevel = 0;
+  }
+
   increaseLoneliness() {
     const lonelinessInterval = setInterval(() => {
-      console.log(this.deathCheck());
       if (this.deathCheck() === true) {
         this.deathClearInterval(lonelinessInterval);
       } else {
-        console.log("Loneliness: " + this.lonelinessLevel);
         this.lonelinessLevel++;
+        document.getElementById("lonelinessStatus").innerHTML = this.lonelinessLevel;
         return this.lonelinessLevel;
       }
     }, 2000);
   }
 
+  snuggle() {
+    this.lonelinessLevel = 0;
+  }
+
   increaseSleepiness() {
     const sleepinessInterval = setInterval(() => {
       if (this.deathCheck() === true) {
-        console.log("Should stop");
         this.deathClearInterval(sleepinessInterval);
       } else {
-        console.log("Sleepiness: " + this.sleepinessLevel);
         this.sleepinessLevel++;
+        document.getElementById("sleepinessStatus").innerHTML = this.sleepinessLevel;
         return this.sleepinessLevel;
       }
     }, 3000);
+  }
+
+  sleep() {
+    this.sleepinessLevel = 0;
   }
 
   deathCheck() {

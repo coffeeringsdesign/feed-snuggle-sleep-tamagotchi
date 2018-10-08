@@ -17,5 +17,22 @@ $(document).ready(function() {
     $(".petNameDisplay").show();
     $(".petNameDisplay").text(pet1.name);
     $("#nameInput").hide();
+
+    $("button[name='feed']").click(function() {
+      pet1.feed();
+    });
+
+    $("button[name='play']").click(function() {
+      pet1.snuggle();
+    });
+
+    $("button[name='sleep']").click(function() {
+      pet1.sleep();
+    });
+  });
+
+
+  $("#restartButton").click(function() {
+    event.preventDefault();
   });
 });
