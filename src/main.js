@@ -12,9 +12,13 @@ $(document).ready(function() {
     $(".actionButtons").show();
     $(".status").show();
 
+    if( $('#imageToReplace').is(':empty') ) {
+      $("#pusheenImage").show();
+    }
     pet1.increaseHunger();
     pet1.increaseLoneliness();
     pet1.increaseSleepiness();
+
 
     $(".petNameDisplay").show();
     $(".petNameDisplay").text(pet1.name);
@@ -31,6 +35,12 @@ $(document).ready(function() {
     $("button[name='sleep']").click(function() {
       pet1.sleep();
     });
+
+    console.log("pet1.lonelinessLevel: " + pet1.lonelinessLevel);
+    if (pet1.lonelinessLevel >= 7) {
+      $("#pusheenLonelyImage").show();
+      $("#pusheenImage").hide();
+    }
 
     $("#restart").click(function() {
       console.log("click is working");

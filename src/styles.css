@@ -1,3 +1,11 @@
 .petNameDisplay, .actionButtons, .status {
   display: none;
 }
+
+ #pusheenLonelyImage, #pusheenHungryImage,  #pusheenSleepyImage, #pusheenImage {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
