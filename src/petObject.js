@@ -1,5 +1,4 @@
-
-export default class Pet {
+export class Pet {
   constructor() {
     this.name = name;
     this.hungerLevel = 0;
@@ -39,7 +38,7 @@ export default class Pet {
         this.lonelinessLevel++;
         return this.lonelinessLevel;
       }
-    }, 3000);
+    }, 2000);
   }
 
   increaseSleepiness() {
@@ -62,5 +61,4 @@ export default class Pet {
       return false;
     }
   }
-
 }

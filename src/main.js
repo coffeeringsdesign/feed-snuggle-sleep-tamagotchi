@@ -2,7 +2,7 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
-import Pet from './petObject.js';
+import { Pet } from './petObject.js';
 
 $(document).ready(function() {
   $("#nameInput").submit(function(event) {
