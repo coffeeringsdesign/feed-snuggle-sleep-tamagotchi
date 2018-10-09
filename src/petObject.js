@@ -24,8 +24,10 @@ export class Pet {
     const hungerInterval = setInterval(() => {
       if (this.deathCheck() === true) {
         this.deathClearInterval(hungerInterval);
-        document.getElementById('imageToReplace').innerHTML = "";
-        document.getElementById("imageToReplace").innerHTML = "<img src='./assets/images/hungry-pusheen.gif'>";
+        if (this.hungerLevel === 10) {
+          document.getElementById('imageToReplace').innerHTML = "";
+          document.getElementById("imageToReplace").innerHTML = "<img src='./assets/images/hungry-pusheen.gif'>";
+        }
       } else {
         this.hungerLevel++;
         document.getElementById("hungerStatus").innerHTML = this.hungerLevel;
@@ -43,9 +45,10 @@ export class Pet {
     const lonelinessInterval = setInterval(() => {
       if (this.deathCheck() === true) {
         this.deathClearInterval(lonelinessInterval);
-      } else if (this.lonelinessLevel >= 7) {
-        document.getElementById('imageToReplace').innerHTML = "";
-        document.getElementById("imageToReplace").innerHTML = "<img src='./assets/images/lonely-pusheen.gif'>";
+        if (this.lonelinessLevel === 10) {
+          document.getElementById('imageToReplace').innerHTML = "";
+          document.getElementById("imageToReplace").innerHTML = "<img src='./assets/images/lonely-pusheen.gif'>";
+        }
       } else {
         this.lonelinessLevel++;
         document.getElementById("lonelinessStatus").innerHTML = this.lonelinessLevel;
@@ -63,9 +66,10 @@ export class Pet {
     const sleepinessInterval = setInterval(() => {
       if (this.deathCheck() === true) {
         this.deathClearInterval(sleepinessInterval);
-      } else if (this.sleepinessLevel >= 7) {
-        document.getElementById('imageToReplace').innerHTML = "";
-        document.getElementById("imageToReplace").innerHTML = "<img src='./assets/images/sleepy-pusheen.gif'>";
+        if (this.sleepinessLevel === 10) {
+          document.getElementById('imageToReplace').innerHTML = "";
+          document.getElementById("imageToReplace").innerHTML = "<img src='./assets/images/sleepy-pusheen.gif'>";
+        }
       } else {
         this.sleepinessLevel++;
         document.getElementById("sleepinessStatus").innerHTML = this.sleepinessLevel;
