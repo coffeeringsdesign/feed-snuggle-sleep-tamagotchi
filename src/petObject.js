@@ -33,7 +33,7 @@ export class Pet {
         document.getElementById("hungerStatus").innerHTML = this.hungerLevel;
         return this.hungerLevel;
       }
-    }, 200);
+    }, 3600000);
   }
 
   feed() {
@@ -54,7 +54,7 @@ export class Pet {
         document.getElementById("lonelinessStatus").innerHTML = this.lonelinessLevel;
         return this.lonelinessLevel;
       }
-    }, 600);
+    }, 7200000);
   }
 
   snuggle() {
@@ -75,7 +75,7 @@ export class Pet {
         document.getElementById("sleepinessStatus").innerHTML = this.sleepinessLevel;
         return this.sleepinessLevel;
       }
-    }, 800);
+    }, 10800000);
   }
 
   sleep() {
