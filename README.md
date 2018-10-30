@@ -52,12 +52,8 @@ Add description here
 * Jasmine
 * Karma
 
-## Links
-
-* Add links here
-
 ## License
 
 This software is licensed under the MIT license.
 
-Copyright (c) 2018 **Your Name Here**
+Copyright (c) 2018 **Kendra Kelly**
