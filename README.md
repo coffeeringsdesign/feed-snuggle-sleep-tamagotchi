@@ -1,4 +1,5 @@
-# Project Title
+![Kendra Kelly Logo](/kkgithub.png)
+# Feed, Snuggle, Sleep.. Tamagotchi!
 
 #### Epicodus JavaScript exercise, Date
 
